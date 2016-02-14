@@ -1,4 +1,4 @@
-# duplicatedfileremover
+# Duplicated File Remover
 
 To execute the script with Maven you must use the command below:
 
