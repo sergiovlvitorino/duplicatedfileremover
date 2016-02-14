@@ -1,2 +1,5 @@
 # duplicatedfileremover
-Script to remove duplicated files in a especific folder.
+
+To execute the script with Maven you must use the command below:
+
+$> mvn compile exec:java -Dexec.mainClass="br.com.challenges.vitorino.duplicatedfileremover.DuplicatedFileRemover" -Dexec.args="pathname"
