@@ -18,15 +18,19 @@ public class DuplicatedFileRemover {
 			if (args == null || args.length == 0) {
 				throw new IllegalArgumentException("Insert the pathname as the first argument.");
 			}
-			duplicatedFileRemover.execute(args[0]);
+			if (duplicatedFileRemover.execute(args[0])) {
+				System.out.println("No duplicated files.");
+			} else {
+				System.out.println("Duplicated files removed.");
+			}
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
 	}
 	
 	
-	public void execute(String inputPathname) throws IOException{
-		core.execute(inputPathname);
+	public boolean execute(String inputPathname) throws IOException{
+		return core.execute(inputPathname);
 	}
 
 }

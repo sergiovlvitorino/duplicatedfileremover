@@ -23,7 +23,7 @@ public class Core {
 		Set<File> allFiles = reader.readFolder(inputPathname);
 		Set<File> duplicatedFiles = finder.find(allFiles);
 		if (duplicatedFiles.isEmpty()) {
-			System.out.println("No duplicated files.");
+			return false;
 		}
 		return remover.remove(duplicatedFiles);
 	}
